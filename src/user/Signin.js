@@ -6,7 +6,7 @@ import { signin, authenticate, isAutheticated } from "../auth/helper";
 
 const Signin = () => {
   const [values, setValues] = useState({
-    email: "b@hitesh.com",
+    email: "a@prasad.com",
     password: "123456",
     error: "",
     loading: false,
@@ -83,25 +83,25 @@ const Signin = () => {
         <div className="col-md-6 offset-sm-3 text-left">
           <form>
             <div className="form-group">
-              <label className="text-light">Email</label>
+              <label className="text-dark">Email</label>
               <input
                 onChange={handleChange("email")}
                 value={email}
-                className="form-control"
+                className="form-control rounded-pill"
                 type="email"
               />
             </div>
 
             <div className="form-group">
-              <label className="text-light">Password</label>
+              <label className="text-dark">Password</label>
               <input
                 onChange={handleChange("password")}
                 value={password}
-                className="form-control"
+                className="form-control rounded-pill"
                 type="password"
               />
             </div>
-            <button onClick={onSubmit} className="btn btn-success btn-block">
+            <button onClick={onSubmit} className="btn btn-success btn-block rounded-pill">
               Submit
             </button>
           </form>
@@ -117,7 +117,7 @@ const Signin = () => {
       {signInForm()}
       {performRedirect()}
 
-      <p className="text-white text-center">{JSON.stringify(values)}</p>
+      {/* <p className="text-white text-center">{JSON.stringify(values)}</p> */}
     </Base>
   );
 };

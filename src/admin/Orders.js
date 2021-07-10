@@ -60,11 +60,11 @@ const Orders = () => {
         {orders.map((order, index) => {
           return (
             <tr key={index} className="text-center">
-              <th scope="row">{order.user.name}</th>
+              <th scope="row" style={{textTransform: "capitalize"}}>{order.user.name}</th>
               {/* //TODO: */}
-              <td>{productToDisplay(order.products)}</td>
-              <td>{order.address}</td>
-              <td>{order.amount} $</td>
+              <td style={{textTransform: "capitalize"}}>{productToDisplay(order.products)}</td>
+              <td style={{textTransform: "capitalize"}}>{order.address}</td>
+              <td style={{textTransform: "capitalize"}}>{order.amount} $</td>
             </tr>
           );
         })}
@@ -74,7 +74,7 @@ const Orders = () => {
 
   return (
     <Base title="Orders are Here" description="">
-      <div className="container my-5 table-success">{displayTable(orders)}</div>
+      <div className="container my-5 table-secondary">{displayTable(orders)}</div>
     </Base>
   );
 };

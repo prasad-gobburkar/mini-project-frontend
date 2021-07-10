@@ -35,7 +35,7 @@ const ManageCategories = () => {
   return (
     <Base title="Welcome admin" description="Manage categories here">
       <h2 className="mb-4">All Categories:</h2>
-      <Link className="btn btn-info" to={`/admin/dashboard`}>
+      <Link className="btn btn-info rounded-pill" to={`/admin/dashboard`}>
         <span className="">Admin Home</span>
       </Link>
       <div className="row">
@@ -46,11 +46,11 @@ const ManageCategories = () => {
             return (
               <div key={index} className="row text-center mb-2 ">
                 <div className="col-4">
-                  <h3 className="text-white text-left">{category.name}</h3>
+                  <h5 className="text-dark text-left">{category.name}</h5>
                 </div>
                 <div className="col-4">
                   <Link
-                    className="btn btn-success"
+                    className="btn btn-success rounded-pill"
                     to={`/admin/category/update/${category._id}`}
                   >
                     <span className="">Update</span>
@@ -61,7 +61,7 @@ const ManageCategories = () => {
                     onClick={() => {
                       deleteThisCategory(category._id);
                     }}
-                    className="btn btn-danger"
+                    className="btn btn-danger rounded-pill"
                   >
                     Delete
                   </button>

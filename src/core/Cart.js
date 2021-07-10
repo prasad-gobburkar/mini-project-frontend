@@ -13,11 +13,10 @@ const Cart = () => {
   useEffect(() => {
     setProducts(loadCart());
   }, [reload]);
-
   const loadAllProducts = products => {
     return (
       <div>
-        <h2>This section is to load products</h2>
+        {/* <h2>This section is to load products</h2> */}
         {products.map((product, index) => (
           <Card
             key={index}

@@ -186,7 +186,7 @@ const UpdateProduct = ({ match }) => {
       <button
         type="submit"
         onClick={onSubmit}
-        className="btn btn-outline-success mb-3"
+        className="btn btn-outline-success mb-3 rounded-pill"
       >
         Update Product
       </button>
@@ -199,7 +199,7 @@ const UpdateProduct = ({ match }) => {
       description="Welcome to product creation section"
       className="container bg-info p-4"
     >
-      <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">
+      <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3 rounded-pill">
         Admin Home
       </Link>
       <div className="row bg-dark text-white rounded">

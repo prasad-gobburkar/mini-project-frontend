@@ -33,7 +33,7 @@ const Card = ({
       addtoCart && (
         <button
           onClick={addToCart}
-          className="btn btn-block btn-outline-success mt-2 mb-2"
+          className="btn btn-block btn-outline-success mt-2 mb-2 rounded-pill"
         >
           Add to Cart
         </button>
@@ -49,7 +49,7 @@ const Card = ({
             removeItemFromCart(product._id);
             setReload(!reload);
           }}
-          className="btn btn-block btn-outline-danger mt-2 mb-2"
+          className="btn btn-block btn-outline-danger mt-2 mb-2 rounded-pill"
         >
           Remove from cart
         </button>
@@ -57,17 +57,18 @@ const Card = ({
     );
   };
   return (
-    <div className="card text-white bg-dark border border-info ">
-      <div className="card-header lead">{cartTitle}</div>
-      <div className="card-body">
-        {getARedirect(redirect)}
+    <div className="card text-dark bg-light" style={{width:"18rem",height:"25.125rem"}}>
         <ImageHelper product={product} />
-        <p className="lead bg-success font-weight-normal text-wrap">
+      
+      <div className="card-body">
+      <div className="card-title" style={{textTransform:"capitalize"}}>{cartTitle}</div>
+        {getARedirect(redirect)}
+        <p className="card-text font-weight-normal text-wrap">
           {cartDescrption}
         </p>
-        <p className="btn btn-success rounded  btn-sm px-4">$ {cartPrice}</p>
+        <p className="btn btn-success rounded  btn-sm px-4 rounded-pill">Price: $ {cartPrice}</p>
         <div className="row">
-          <div className="col-12">{showAddToCart(addtoCart)}</div>
+          <div className="col-12 ">{showAddToCart(addtoCart)}</div>
           <div className="col-12">{showRemoveFromCart(removeFromCart)}</div>
         </div>
       </div>

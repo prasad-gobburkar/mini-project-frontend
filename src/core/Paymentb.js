@@ -21,10 +21,10 @@ const Paymentb = ({ products, setReload = (f) => f, reload = undefined }) => {
 
   const addressBox = () => {
     return (
-      <div class="form-group">
-        <label for="AddressField">Example textarea</label>
+      <div className="form-group">
+        <label for="AddressField">Enter Your Address Here</label>
         <textarea
-          class="form-control"
+          className="form-control"
           id="AddressField"
           rows="3"
           required
@@ -56,7 +56,7 @@ const Paymentb = ({ products, setReload = (f) => f, reload = undefined }) => {
               options={{ authorization: info.clientToken }}
               onInstance={(instance) => (info.instance = instance)}
             />
-            <button className="btn btn-block btn-success" onClick={onPurchase}>
+            <button className="btn btn-block btn-success rounded-pill" onClick={onPurchase}>
               Buy
             </button>
           </div>
@@ -116,7 +116,7 @@ const Paymentb = ({ products, setReload = (f) => f, reload = undefined }) => {
 
   return (
     <div>
-      <h3>Your bill is {getAmount()} $</h3>
+      <h3 className="text-dark">Your bill is {getAmount()} $</h3>
       {showbtdropIn()}
     </div>
   );

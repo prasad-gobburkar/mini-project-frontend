@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 .btn,
 .jumbotron,
 .nav :hover {
@@ -5,7 +6,10 @@
 }
 
 body {
-  background: #343a40;
+  /* background: #343a40; */
+  /* background: #6c757d; */
+  background: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* footer {
